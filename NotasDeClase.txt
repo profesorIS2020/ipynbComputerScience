@@ -1,0 +1,4 @@
+Tres aspectosimortantes que un analista de datos debe ssaber:
+1) Control de versiones
+2) Servidores Jupyter 
+3) Entornos  aislados de python
