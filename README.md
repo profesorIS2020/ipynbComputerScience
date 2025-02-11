@@ -1,1 +1,1 @@
-# ipynbInform-tica
+# ipynbComputerScience
