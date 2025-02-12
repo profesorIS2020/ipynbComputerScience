@@ -1,0 +1,5 @@
+print('Hello, word')
+user_name = input('Introduzca su nombre: ')
+print('Hello', user_name)
+name = input('Cuál es el nombre de tu mejor amigo: ')
+print('Hola Mejor Amigo', name)
