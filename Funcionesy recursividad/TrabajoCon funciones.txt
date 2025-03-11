@@ -207,6 +207,17 @@ def centrar_cadena(s, width):
         
 ------------------------------------------------------------------------------------------------    
 
+## 
+# Colocar la primera letra mayúscula a las frases dadas
+#
+
+## Colocar la mayúscula a las letras pertinentes en una cadena
+# @param s la cadena que requiere colocar letra mayúscula
+# @return Retornar la cadena con la letra mayúscula colocada pertinentemente.
+
+def capitalize(s):
+    #
+
 def capitalizar_cadena(texto):
     return texto.capitalize()
 
