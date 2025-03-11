@@ -52,7 +52,8 @@ from int.ordinal import intToOrdinal
 """
 Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
 """
-
+## Imprimir una canción de navidad
+# @param n numero entero
 def imprimir_cancion_navidad(n):
     print("En el ", inToOrdinal(n), "día de Navidad")
     print("mi amor verdadero me ha enviado: ")
@@ -77,7 +78,8 @@ from int.ordinal import intToOrdinal
 """
 Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
 """
-
+## Imprimir una canción de navidad
+# @param n numero entero
 def generarVersos(n):
     print("En el ", inToOrdinal(n), "día de Navidad")
     print("mi amor verdadero me ha enviado: ")
@@ -117,6 +119,9 @@ def main():
         generarVersos(verso)
 # Llamar a la función main
 main()
+
+## Imprimir una canción de navidad
+# @param n numero entero
 
 ##
 # Generar la letra completa de la cación Los 12 días de Navidad (Variante III: En Inglés)
@@ -171,12 +176,36 @@ main()
 --------------------------------------------------------------------------------------
 
 ##
-# Centrar un string en la terminal
+# Centrar un string en la terminal dentro de un ancho determinado
 #
+WITDTH = 80
 
-def centrar_cadena(cadena, ancho):
-    espacios = (ancho - len(cadena)) // 2
-    return " " * espacios + cadena
+## Crear una nueva cadena que será dcentrada dentro de un ancho dado cuando se imprime.
+# @param s la cadena que será centrada
+# @param width el ancho dentro del cual la cadena será centrada
+# @return retorna la cadena s centrada cuando es impresa 
+
+def centrar_cadena(s, width):
+    # Si la cadena es demasiado larga para centrarla, entonces es retornada la cadena original
+    if width < len(s)
+        return s
+    # Calcula el número de espacios que se requieren y genera un resultado
+    spaces = (width - len(s)) // 2
+    result = " " + spaces + s
+
+    return result
+
+    # Demostración de la función centrar_cadena
+    def main():
+        print(centrar_cadena("Una historia Famosa", WIDTH))
+        print(centrar_cadena("por:", WIDTH))
+        print(centrar_cadena("Wiliam Shakespeare", WIDTH))
+        print()
+        print("Había una vez .......")
+
+    main()
+        
+------------------------------------------------------------------------------------------------    
 
 def capitalizar_cadena(texto):
     return texto.capitalize()
