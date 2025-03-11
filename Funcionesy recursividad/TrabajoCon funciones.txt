@@ -2,11 +2,62 @@ import random
 import string
 import math
 
-def mediana_de_tres(a, b, c):
-    return sorted([a, b, c])[1]
+# Mediana de tres valores
+"""
+Este ejercicio requiere escribir una función que tome tres números como parámetros y devuelva el valor mediano de esos parámetros como su resultado. Incluye un programa principal que lee tres valores del usuario y muestra su mediana. 
+Concepto de mediana: La mediana es un número (estadístico) que divide una lista de valores en dos partes iguales. Esto significa que la mitad de los valores son menores que la mediana y la otra mitad son mayores. La mediana de tres valores es también la suma de los valores menos el más pequeño menos el más grande. 
+"""
+## Calcule la mediana de tres valores usando condicionales
+# @param a primer valor
+# @param b el segundo parametro
+# @param c el tercer parametro
+# @return la mediana de los valores a,b y c
 
-def imprimir_cancion_navidad():
-    regalos = [
+
+def mediana_de_tres(a, b, c):
+    if a < b and b < c or a > b and b > c:
+        return b
+    if b < a and a < c or b > a and a > c:
+        return a
+    if c < a and b < c or c > a and b > c:
+        return c
+
+## Calcule la mediana de tres valores usando las funciones de min y maximo de python
+# @param a primer valor
+# @param b el segundo parametro
+# @param c el tercer parametro
+# @return la mediana de los valores a,b y c
+
+def mediana_con_aritmetica(a, b, c):
+   return a+b+c -min(a, b, c) - max(a, b, c)
+
+# Mostrar la mediana de tres valores ingresada por el usuario
+def main():
+    x= float(input("Entre el primer valor: "))
+    y= float(input("Entre el segundo valor: "))
+    z= float(input("Entre el tercer valor: "))
+    print("El valor medio es: ", mediana_de tres(x, y, z))
+    print("El valor medio usando aritmética es: ", mediana_con_aritmetica(x, y, z))
+
+# Llamar a la función main
+main()
+
+---------------------------------------------------------------------------------------------
+
+##
+# Generar la letra completa de la cación Los 12 días de Navidad (Variante I)
+#
+from int.ordinal import intToOrdinal
+
+"""
+Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
+"""
+
+def imprimir_cancion_navidad(n):
+    print("En el ", inToOrdinal(n), "día de Navidad")
+    print("mi amor verdadero me ha enviado: ")
+
+regalos = [
         "una perdiz en un peral.", "dos tórtolas,", "tres gallinas francesas,",
         "cuatro aves llamadoras,", "cinco anillos dorados,", "seis gansos poniendo,",
         "siete cisnes nadando,", "ocho criadas ordeñando,", "nueve damas bailando,",
@@ -17,6 +68,111 @@ def imprimir_cancion_navidad():
         for j in range(i, -1, -1):
             print(regalos[j])
         print()
+
+##
+# Generar la letra completa de la cación Los 12 días de Navidad (Variante II)
+#
+from int.ordinal import intToOrdinal
+
+"""
+Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
+"""
+
+def generarVersos(n):
+    print("En el ", inToOrdinal(n), "día de Navidad")
+    print("mi amor verdadero me ha enviado: ")
+
+    if n >= 12:
+        print("doce tamborileros tocando, ")
+    if n >= 11:
+            print("Once gaiteros tocando la flauta, ")
+    if n >= 10:
+            print("diez señores saltando, ")
+    if n >= 9:
+            print("nueve damas bailando, ")
+    if n >= 8:
+            print("ocho criadas ordeñando, ")
+    if n >= 7:
+            print("siete cisnes nadando, ")
+    if n >= 6:
+            print("seis gansos poniendo, ")
+    if n >= 5:
+            print("cinco anillos dorados, ")
+    if n >= 4:
+            print("cuatro aves llamadoras, ")
+    if n >= 3:
+            print("tres gallinas francesas, ")
+    if n >= 2:
+            print("dos tórtolas, ")
+    if n >= 1:
+            print("A ", end=" ")
+    else:
+            print("And a ", end=" ")
+    print("una perdiz en un peral.")
+    print()
+
+# Mostrar los 12 versos de la canción
+def main():
+    for verso en range(1, 13):
+        generarVersos(verso)
+# Llamar a la función main
+main()
+
+##
+# Generar la letra completa de la cación Los 12 días de Navidad (Variante III: En Inglés)
+#
+from int.ordinal import intToOrdinal
+
+"""
+Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
+"""
+
+def generarVersos(n):
+    print("En el ", inToOrdinal(n), "día de Navidad")
+    print("mi amor verdadero me ha enviado: ")
+
+    if n >= 12:
+        print("Twelve drummers drumming, ")
+    if n >= 11:
+            print("Eleven pipers piping, ")
+    if n >= 10:
+            print("Ten lords a leaping, ")
+    if n >= 9:
+            print("Nine ladies dancing, ")
+    if n >= 8:
+            print("Eight maids a milking, ")
+    if n >= 7:
+            print("Seven swans a swimming, ")
+    if n >= 6:
+            print("Six geese a laying, ")
+    if n >= 5:
+            print("Five golden rings, ")
+    if n >= 4:
+            print("Four calling birds, ")
+    if n >= 3:
+            print("Three French hens, ")
+    if n >= 2:
+            print("Two turtle doves, ")
+    if n >= 1:
+            print("A ", end=" ")
+    else:
+            print("And a ", end=" ")
+    print("una perdiz en un peral.")
+    print()
+
+# Mostrar los 12 versos de la canción
+def main():
+    for verso en range(1, 13):
+        generarVersos(verso)
+# Llamar a la función main
+main()
+
+
+--------------------------------------------------------------------------------------
+
+##
+# Centrar un string en la terminal
+#
 
 def centrar_cadena(cadena, ancho):
     espacios = (ancho - len(cadena)) // 2
