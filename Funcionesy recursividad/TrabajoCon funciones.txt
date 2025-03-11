@@ -1,0 +1,82 @@
+import random
+import string
+import math
+
+def mediana_de_tres(a, b, c):
+    return sorted([a, b, c])[1]
+
+def imprimir_cancion_navidad():
+    regalos = [
+        "una perdiz en un peral.", "dos tórtolas,", "tres gallinas francesas,",
+        "cuatro aves llamadoras,", "cinco anillos dorados,", "seis gansos poniendo,",
+        "siete cisnes nadando,", "ocho criadas ordeñando,", "nueve damas bailando,",
+        "diez señores saltando,", "once gaiteros tocando,", "doce tamborileros tocando"
+    ]
+    for i in range(12):
+        print(f"En el día {i+1} de Navidad mi amor me dio:")
+        for j in range(i, -1, -1):
+            print(regalos[j])
+        print()
+
+def centrar_cadena(cadena, ancho):
+    espacios = (ancho - len(cadena)) // 2
+    return " " * espacios + cadena
+
+def capitalizar_cadena(texto):
+    return texto.capitalize()
+
+def es_entero(cadena):
+    return cadena.isdigit() or (cadena.startswith('-') and cadena[1:].isdigit())
+
+def es_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def generar_contraseña():
+    longitud = random.randint(7, 10)
+    return ''.join(chr(random.randint(33, 126)) for _ in range(longitud))
+
+def es_contraseña_segura(password):
+    return (
+        len(password) >= 8 and
+        any(c.isupper() for c in password) and
+        any(c.islower() for c in password) and
+        any(c.isdigit() for c in password)
+    )
+
+def convertir_base(numero, base_origen, base_destino):
+    if not (2 <= base_origen <= 16 and 2 <= base_destino <= 16):
+        return "Error: base fuera del rango permitido."
+    decimal = int(numero, base_origen)
+    return format(decimal, 'x' if base_destino == 16 else 'b' if base_destino == 2 else '')
+
+def reducir_fraccion(numerador, denominador):
+    def mcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+    divisor = mcd(numerador, denominador)
+    return numerador // divisor, denominador // divisor
+
+def es_fecha_magica(dia, mes, año):
+    return dia * mes == año % 100
+
+def encontrar_fechas_magicas():
+    for año in range(1900, 2000):
+        for mes in range(1, 13):
+            for dia in range(1, 32):
+                if es_fecha_magica(dia, mes, año):
+                    print(f"{dia}/{mes}/{año}")
+
+# Ejemplo de uso
+a, b, c = 3, 7, 5
+print(f"Mediana de {a}, {b}, {c}: {mediana_de_tres(a, b, c)}")
+print("Ejemplo de centrar cadena:")
+print(centrar_cadena("Hola", 20))
+print(f"Es primo 11? {es_primo(11)}")
+print(f"Contraseña generada: {generar_contraseña()}")
+encontrar_fechas_magicas()
