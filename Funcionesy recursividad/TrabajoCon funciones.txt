@@ -216,11 +216,40 @@ def centrar_cadena(s, width):
 # @return Retornar la cadena con la letra mayúscula colocada pertinentemente.
 
 def capitalize(s):
-    #
+    # Capitalización correcta para i
+    result = s.replace(" i ", " I ")
+    # Capitalizar el primer caracter del string
+    if len(s) > 0:
+        result = result[0].upper() + \
+                 result [1 : len(result)]
+    # Capitalizar la primera letra que siga a ".", "!", "?"
+    pos = 0
+    while pos < len(s):
+        if result[pos] == "." or result[pos] == "!" or result[pos] == "?":
+            # Mover el caracter "." u otro
+            pos = pos + 1
+            # Mover cualquier espacio
+            while pos < len[s] and result[pos] == " ":
+                pos = pos +1
+            # Si no se ha alcanzado el fin de la cadena entonces reemplace
+            # el caracter actual por la mayúscula equivalente
+            if pos < len(s):
+                result = result[0 : pos] + \
+                        result[pos].upper() \
+                        result[pos +1 : len(result)]
+        # Mover al proximo caracter
+        pos = pos + 1
+    resturn result
 
-def capitalizar_cadena(texto):
-    return texto.capitalize()
+# Demostración
+def main():
+    s = input("Entre algún texto: ")
+    capitalized = capitalize(s)
+   print("Es capitalizada  as: ", capitalized)
 
+# Llamar a la función main
+main()
+--------------------------------------------------------------------------------------------------------------------
 def es_entero(cadena):
     return cadena.isdigit() or (cadena.startswith('-') and cadena[1:].isdigit())
 
