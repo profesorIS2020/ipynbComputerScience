@@ -1,0 +1,307 @@
+import random
+import string
+import math
+
+# Mediana de tres valores
+"""
+Este ejercicio requiere escribir una función que tome tres números como parámetros y devuelva el valor mediano de esos parámetros como su resultado. Incluye un programa principal que lee tres valores del usuario y muestra su mediana. 
+Concepto de mediana: La mediana es un número (estadístico) que divide una lista de valores en dos partes iguales. Esto significa que la mitad de los valores son menores que la mediana y la otra mitad son mayores. La mediana de tres valores es también la suma de los valores menos el más pequeño menos el más grande. 
+"""
+## Calcule la mediana de tres valores usando condicionales
+# @param a primer valor
+# @param b el segundo parametro
+# @param c el tercer parametro
+# @return la mediana de los valores a,b y c
+
+
+def mediana_de_tres(a, b, c):
+    if a < b and b < c or a > b and b > c:
+        return b
+    if b < a and a < c or b > a and a > c:
+        return a
+    if c < a and b < c or c > a and b > c:
+        return c
+
+## Calcule la mediana de tres valores usando las funciones de min y maximo de python
+# @param a primer valor
+# @param b el segundo parametro
+# @param c el tercer parametro
+# @return la mediana de los valores a,b y c
+
+def mediana_con_aritmetica(a, b, c):
+   return a+b+c -min(a, b, c) - max(a, b, c)
+
+# Mostrar la mediana de tres valores ingresada por el usuario
+def main():
+    x= float(input("Entre el primer valor: "))
+    y= float(input("Entre el segundo valor: "))
+    z= float(input("Entre el tercer valor: "))
+    print("El valor medio es: ", mediana_de tres(x, y, z))
+    print("El valor medio usando aritmética es: ", mediana_con_aritmetica(x, y, z))
+
+# Llamar a la función main
+main()
+
+---------------------------------------------------------------------------------------------
+
+##
+# Generar la letra completa de la cación Los 12 días de Navidad (Variante I)
+#
+from int.ordinal import intToOrdinal
+
+"""
+Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
+"""
+## Imprimir una canción de navidad
+# @param n numero entero
+def imprimir_cancion_navidad(n):
+    print("En el ", inToOrdinal(n), "día de Navidad")
+    print("mi amor verdadero me ha enviado: ")
+
+regalos = [
+        "una perdiz en un peral.", "dos tórtolas,", "tres gallinas francesas,",
+        "cuatro aves llamadoras,", "cinco anillos dorados,", "seis gansos poniendo,",
+        "siete cisnes nadando,", "ocho criadas ordeñando,", "nueve damas bailando,",
+        "diez señores saltando,", "once gaiteros tocando,", "doce tamborileros tocando"
+    ]
+    for i in range(12):
+        print(f"En el día {i+1} de Navidad mi amor me dio:")
+        for j in range(i, -1, -1):
+            print(regalos[j])
+        print()
+
+##
+# Generar la letra completa de la cación Los 12 días de Navidad (Variante II)
+#
+from int.ordinal import intToOrdinal
+
+"""
+Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
+"""
+## Imprimir una canción de navidad
+# @param n numero entero
+def generarVersos(n):
+    print("En el ", inToOrdinal(n), "día de Navidad")
+    print("mi amor verdadero me ha enviado: ")
+
+    if n >= 12:
+        print("doce tamborileros tocando, ")
+    if n >= 11:
+            print("Once gaiteros tocando la flauta, ")
+    if n >= 10:
+            print("diez señores saltando, ")
+    if n >= 9:
+            print("nueve damas bailando, ")
+    if n >= 8:
+            print("ocho criadas ordeñando, ")
+    if n >= 7:
+            print("siete cisnes nadando, ")
+    if n >= 6:
+            print("seis gansos poniendo, ")
+    if n >= 5:
+            print("cinco anillos dorados, ")
+    if n >= 4:
+            print("cuatro aves llamadoras, ")
+    if n >= 3:
+            print("tres gallinas francesas, ")
+    if n >= 2:
+            print("dos tórtolas, ")
+    if n >= 1:
+            print("A ", end=" ")
+    else:
+            print("And a ", end=" ")
+    print("una perdiz en un peral.")
+    print()
+
+# Mostrar los 12 versos de la canción
+def main():
+    for verso en range(1, 13):
+        generarVersos(verso)
+# Llamar a la función main
+main()
+
+## Imprimir una canción de navidad
+# @param n numero entero
+
+##
+# Generar la letra completa de la cación Los 12 días de Navidad (Variante III: En Inglés)
+#
+from int.ordinal import intToOrdinal
+
+"""
+Las funciones previas han sido utilizadas en este script de manera tal que el código para convertir un entero a su ordinal no tiene que ser duplicado aquí.
+"""
+
+def generarVersos(n):
+    print("En el ", inToOrdinal(n), "día de Navidad")
+    print("mi amor verdadero me ha enviado: ")
+
+    if n >= 12:
+        print("Twelve drummers drumming, ")
+    if n >= 11:
+            print("Eleven pipers piping, ")
+    if n >= 10:
+            print("Ten lords a leaping, ")
+    if n >= 9:
+            print("Nine ladies dancing, ")
+    if n >= 8:
+            print("Eight maids a milking, ")
+    if n >= 7:
+            print("Seven swans a swimming, ")
+    if n >= 6:
+            print("Six geese a laying, ")
+    if n >= 5:
+            print("Five golden rings, ")
+    if n >= 4:
+            print("Four calling birds, ")
+    if n >= 3:
+            print("Three French hens, ")
+    if n >= 2:
+            print("Two turtle doves, ")
+    if n >= 1:
+            print("A ", end=" ")
+    else:
+            print("And a ", end=" ")
+    print("una perdiz en un peral.")
+    print()
+
+# Mostrar los 12 versos de la canción
+def main():
+    for verso en range(1, 13):
+        generarVersos(verso)
+# Llamar a la función main
+main()
+
+
+--------------------------------------------------------------------------------------
+
+##
+# Centrar un string en la terminal dentro de un ancho determinado
+#
+WITDTH = 80
+
+## Crear una nueva cadena que será dcentrada dentro de un ancho dado cuando se imprime.
+# @param s la cadena que será centrada
+# @param width el ancho dentro del cual la cadena será centrada
+# @return retorna la cadena s centrada cuando es impresa 
+
+def centrar_cadena(s, width):
+    # Si la cadena es demasiado larga para centrarla, entonces es retornada la cadena original
+    if width < len(s)
+        return s
+    # Calcula el número de espacios que se requieren y genera un resultado
+    spaces = (width - len(s)) // 2
+    result = " " + spaces + s
+
+    return result
+
+    # Demostración de la función centrar_cadena
+    def main():
+        print(centrar_cadena("Una historia Famosa", WIDTH))
+        print(centrar_cadena("por:", WIDTH))
+        print(centrar_cadena("Wiliam Shakespeare", WIDTH))
+        print()
+        print("Había una vez .......")
+
+    main()
+        
+------------------------------------------------------------------------------------------------    
+
+## 
+# Colocar la primera letra mayúscula a las frases dadas
+#
+
+## Colocar la mayúscula a las letras pertinentes en una cadena
+# @param s la cadena que requiere colocar letra mayúscula
+# @return Retornar la cadena con la letra mayúscula colocada pertinentemente.
+
+def capitalize(s):
+    # Capitalización correcta para i
+    result = s.replace(" i ", " I ")
+    # Capitalizar el primer caracter del string
+    if len(s) > 0:
+        result = result[0].upper() + \
+                 result [1 : len(result)]
+    # Capitalizar la primera letra que siga a ".", "!", "?"
+    pos = 0
+    while pos < len(s):
+        if result[pos] == "." or result[pos] == "!" or result[pos] == "?":
+            # Mover el caracter "." u otro
+            pos = pos + 1
+            # Mover cualquier espacio
+            while pos < len[s] and result[pos] == " ":
+                pos = pos +1
+            # Si no se ha alcanzado el fin de la cadena entonces reemplace
+            # el caracter actual por la mayúscula equivalente
+            if pos < len(s):
+                result = result[0 : pos] + \
+                        result[pos].upper() \
+                        result[pos +1 : len(result)]
+        # Mover al proximo caracter
+        pos = pos + 1
+    resturn result
+
+# Demostración
+def main():
+    s = input("Entre algún texto: ")
+    capitalized = capitalize(s)
+   print("Es capitalizada  as: ", capitalized)
+
+# Llamar a la función main
+main()
+--------------------------------------------------------------------------------------------------------------------
+def es_entero(cadena):
+    return cadena.isdigit() or (cadena.startswith('-') and cadena[1:].isdigit())
+
+def es_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def generar_contraseña():
+    longitud = random.randint(7, 10)
+    return ''.join(chr(random.randint(33, 126)) for _ in range(longitud))
+
+def es_contraseña_segura(password):
+    return (
+        len(password) >= 8 and
+        any(c.isupper() for c in password) and
+        any(c.islower() for c in password) and
+        any(c.isdigit() for c in password)
+    )
+
+def convertir_base(numero, base_origen, base_destino):
+    if not (2 <= base_origen <= 16 and 2 <= base_destino <= 16):
+        return "Error: base fuera del rango permitido."
+    decimal = int(numero, base_origen)
+    return format(decimal, 'x' if base_destino == 16 else 'b' if base_destino == 2 else '')
+
+def reducir_fraccion(numerador, denominador):
+    def mcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+    divisor = mcd(numerador, denominador)
+    return numerador // divisor, denominador // divisor
+
+def es_fecha_magica(dia, mes, año):
+    return dia * mes == año % 100
+
+def encontrar_fechas_magicas():
+    for año in range(1900, 2000):
+        for mes in range(1, 13):
+            for dia in range(1, 32):
+                if es_fecha_magica(dia, mes, año):
+                    print(f"{dia}/{mes}/{año}")
+
+# Ejemplo de uso
+a, b, c = 3, 7, 5
+print(f"Mediana de {a}, {b}, {c}: {mediana_de_tres(a, b, c)}")
+print("Ejemplo de centrar cadena:")
+print(centrar_cadena("Hola", 20))
+print(f"Es primo 11? {es_primo(11)}")
+print(f"Contraseña generada: {generar_contraseña()}")
+encontrar_fechas_magicas()
