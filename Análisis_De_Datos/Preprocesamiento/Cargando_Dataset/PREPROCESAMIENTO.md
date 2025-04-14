@@ -1,8 +1,8 @@
 # Preprocesamiento I
 
-## Calcular estad°sticas
+## Calcular estad√≠sticas
 * Media
-* Desviaci¢n Estandart
+* Desviaci√≥n Estandart
 * Percentiles
 * Histogramas
 
